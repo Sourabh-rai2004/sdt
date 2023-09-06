@@ -5,21 +5,21 @@
 </head>
 <body>
     <h1>Page 2</h1>
-    <div class="npf_wgts" data-height="400px" data-w="c6a8ec73c5e384848fc3886291e73d22">
+
     <form id="userForm">
-        <label for="name">name</label>
+        <label for="name">Name</label>
         <input type="text" id="name" name="name" required><br><br>
 
-        <label for="email">email</label>
+        <label for="email">Email</label>
         <input type="email" id="email" name="email" required><br><br>
 
-        <label for="phone">phone:</label>
+        <label for="phone">Phone:</label>
         <input type="tel" id="phone" name="phone" required>
 
         <input type="submit" value="Submit">
     </form>
 </div>
-<script type="text/javascript">var s=document.createElement("script"); s.type="text/javascript"; s.async=true; s.src="https://widgets.in5.nopaperforms.com/emwgts.js"; document.body.appendChild(s); </script>
+
     <script>
         // Function to populate form fields with data from the URL
         function populateFormFields() {
@@ -27,11 +27,13 @@
             document.getElementById("name").value = params.get("name") || '';
             document.getElementById("email").value = params.get("email") || '';
             document.getElementById("phone").value = params.get("phone") || '';
-            
         }
 
         // Call the populateFormFields function on page load
         window.addEventListener("load", populateFormFields);
+
+        // Listen for changes in the URL (e.g., navigation within the page)
+        window.addEventListener("popstate", populateFormFields);
     </script>
 
 </body>
